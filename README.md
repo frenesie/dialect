@@ -6,6 +6,16 @@ Dialect provides JSON datatype support for the [Eloquent ORM](http://laravel.com
 
 ## Installation
 
+### Add this below to use this fork
+`
+"repositories": [
+  {
+    "type":"vcs",
+    "url": "git@github.com:frenesie/dialect.git"
+  }
+]
+`
+
 Require this package in your `composer.json` file:
 
 `"darrylkuhn/dialect": "dev-master"`
@@ -34,7 +44,7 @@ becomes this:
 $photo->key = value;
 ```
 Also when calling the toArray() method the attributes are moved to the top level and the 'json_attributes' column is hidden. This essentially hides away the fact that you're using the json datatype and makes it look like we're working with attributes directly.
- 
+
 You can also establish relationships on a model like this (only supported in PostgreSQL):
 ```php
 public function user()
